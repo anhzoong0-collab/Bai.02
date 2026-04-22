@@ -162,14 +162,12 @@ footer{
   text-align:center;
 }
 
-/* Mobile (max-width: 768px) */
 @media(max-width: 768px){
 
- header .container{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
+  header .container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 
   header nav ul{
@@ -186,10 +184,16 @@ footer{
   }
 
   .container::after {
-  content: "";
-  display: block;
-  clear: both;
-}
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  #newsletter h1,
+  #newsletter form{
+    float: none;
+    text-align: center;
+  }
 
   #newsletter form{
     margin-top: 10px;
@@ -204,15 +208,21 @@ footer{
     width: 100%;
   }
 
-
   #boxes .box{
+    float: none;
     width: 100%;
     margin-bottom: 20px;
     text-align: center;
+  }
+
+  article#main-col,
+  aside#sidebar{
+    float: none;
+    width: 100%;
   }
 
   img{
     max-width: 100%;
     height: auto;
   }
-
+}
