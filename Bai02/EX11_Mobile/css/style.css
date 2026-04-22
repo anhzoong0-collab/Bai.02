@@ -165,9 +165,11 @@ footer{
 /* Mobile (max-width: 768px) */
 @media(max-width: 768px){
 
-  header .container{
-    flex-direction: column;
-    text-align: center;
+ header .container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
   }
 
   header nav ul{
@@ -183,10 +185,11 @@ footer{
     font-size: 24px;
   }
 
-  #newsletter .container{
-    flex-direction: column;
-    text-align: center;
-  }
+  .container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 
   #newsletter form{
     margin-top: 10px;
@@ -201,9 +204,6 @@ footer{
     width: 100%;
   }
 
-  #boxes .container{
-    flex-direction: column;
-  }
 
   #boxes .box{
     width: 100%;
@@ -215,4 +215,4 @@ footer{
     max-width: 100%;
     height: auto;
   }
-}
+
